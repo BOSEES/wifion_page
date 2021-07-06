@@ -1,0 +1,230 @@
+/* global setup */
+:root{
+  /* Font Color */
+--font-black: #111111;
+
+--font-white: #ffffff;
+
+--font-dark-white: #bdbdbd;
+
+--font-dark-grey: #333;
+
+--font-grey: #666;
+
+--font-light-grey: #999;
+
+--font-red: #e60055;
+
+/* Background Color */
+
+--back-grey: #eeeeee;
+
+--back-white-grey: #f5f5f5;
+
+--back-deep-white-grey: #f9f9f9;
+
+--back-white: #ffffff;
+
+--back-pink: #fef2f6;
+
+/* Font size */
+
+--font-large: 3.5rem;
+
+--font-medium: 2.5rem;
+
+--font-regular: 1.2rem;
+
+--font-small: 1rem;
+
+--font-micro: 0.8rem;
+
+/* Font weight */
+
+--weight-bold: 700;
+
+--weight-semi-bold: 600;
+
+--weight-regular: 400;
+
+/* Size*/
+--size-border-radius:10px;
+
+/* Animation*/
+--animation-duration: 300ms;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "IBM-font";
+}
+
+a{
+  text-decoration: none;
+  color:var(--color-white);
+}
+
+ul{
+  list-style:none;
+  margin:0px;
+  padding:0px;
+}
+
+body{
+  margin:0px;
+  cursor:default;
+}
+
+button{
+  background-color: transparent;
+  cursor: pointer;
+  border:none;
+  outline:none;
+}
+/* Typography */
+
+h1 {
+
+  font-size: var(--font-large);
+
+  font-weight: var(--weight-bold);
+
+  color:var(--color-black);
+
+  margin: 16px 0px;
+
+}
+
+h2 {
+
+  font-size: var(--font-medium);
+
+  font-weight: var(--weight-semi-bold);
+
+  color: var(--color-black);
+
+  margin: 0;
+
+}
+
+h3 {
+
+  font-size: var(--font-regular);
+
+  font-weight: var(--weight-regular);
+
+  color: var(--color-black);
+
+  margin: 8px 0;
+
+}
+
+p {
+  
+  margin: 4px 0;
+
+}
+
+/* -------------------- Navbar props -----------------*/
+/* position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    align-items: center;
+    color: var(--color-white);
+    padding: 16px;
+    transition: all var(--animation-duration) ease-in-out;
+    z-index: 2; */
+#navbar {
+  top:0;
+  left:0;
+  right:0;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0rem 2rem 0rem;
+  z-index: 2;
+}
+
+.navbar__logo {
+  width: 9rem;
+  height: 2.5rem;
+  margin-left: 6rem;
+}
+
+.navbar__lists {
+  display: flex;
+  margin-right: 4rem;
+}
+
+.navbar__list {
+  margin-left: 3rem;
+}
+
+.navbar__list.red_font {
+  color: var(--font-red);
+}
+
+/* -------------------- Banner -----------------*/
+
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 61rem;
+  background: url("../images/main_back-ground.png") center/cover no-repeat;
+  border-bottom: var(--font-red) 3.6rem solid;
+}
+
+#banner h1 {
+  color: var(--font-red);
+}
+
+.banner__texts {
+  margin-left: 6rem;
+}
+
+.banner__image-phone {
+  margin-top: 18rem;
+  margin-right: 6.5rem;
+  width: 22rem;
+  height: 44rem;
+}
+
+.banner__buttons {
+  display: flex;
+}
+
+.banner__button {
+  display: flex;
+  width: 12.5rem;
+  height: 3rem;
+  font-size: var(--font-small);
+  border: 1px solid var(--font-grey);
+  border-radius: 30px;
+  margin: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+.banner__button img {
+  margin-right:1rem;
+}
+
+.banner__button-app {
+  margin-bottom:1rem
+}
+/* - Font family - */
+@font-face {
+  font-family: "IBM-font";
+  src:url("./font/ibm_eot/IBMPlexSansKR-Regular.eot");
+  src:
+  url(./font/ibm_eot/IBMPlexSansKR-Regular.eot?#iefix) format("embedded-opentype");
+  /* url(./font/ibm_ttf/IBMPlexSansKR-Regular.ttf) format("truetype"),
+  url(./font/ibm_woff/IBMPlexSansKR-Regular.woff) format("woff"); */
+}
