@@ -220,7 +220,7 @@ p {
   margin-top: 4rem;
 }
 
-.project__intro__title-line {
+.project__intro__line {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   border: none;
@@ -257,6 +257,51 @@ p {
   color: var(--font-red)
 }
 
+/* -------------------- Service Features -----------------*/
+
+#service__features {
+  display: flex;
+  justify-content: space-between;
+  background: url("../images/features_background.png") center/cover no-repeat;
+
+}
+
+.service__features__texts {
+margin:10rem 0 10rem 10rem;
+margin-bottom: 0;
+}
+
+.service__features__subtitle {
+  color: var(--font-red)
+}
+
+.service__features__line {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 0;
+  border: none;
+  width: 5rem;
+  height: 0.2rem;
+  background-color: var(--font-red);
+}
+
+.service__features__image {
+  margin: 5rem 10rem 0 5rem;
+  width:36rem;
+  height: 31rem;
+}
+
+.service__features__dots {
+  display: flex;
+}
+
+.service__features__dot {
+  margin:0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--font-red);
+  border-radius: 50%;
+}
 
 /* - Font family - */
 @font-face {
