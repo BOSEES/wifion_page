@@ -123,6 +123,15 @@ h3 {
 
 }
 
+h5 {
+  margin: 4px 0;
+}
+
+h6 {
+  margin: 4px 0;
+}
+
+
 p {
   
   margin: 4px 0;
@@ -367,6 +376,79 @@ margin-bottom: 0;
 
 .company__intro__description {
   color: var(--font-black)
+}
+
+/* -------------------- Proposal -----------------*/
+
+#proposal {
+  text-align: center;
+}
+
+.proposal__title {
+  margin-top: 4rem;
+}
+.proposal__boxes {
+  display: flex;
+  justify-content: center;
+  margin:3rem;
+}
+
+.proposal__line {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  width: 5rem;
+  height: 0.2rem;
+  background-color: var(--font-red);
+}
+
+.proposal__box__map {
+  width: 40rem;
+  height: 35rem;
+}
+
+.proposal__box__address {
+  display: flex;
+  justify-content: center;
+}
+
+.proposal__box__item {
+  margin:0.5rem;
+  display: flex;
+}
+
+.proposal__box__item__image {
+  width: 4rem;
+  height: 4rem;
+}
+
+.proposal__inputs {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+
+.proposal__input {
+  width: 40rem;
+  height: 3rem;
+  padding:1rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  border: none;
+  outline:none;
+  background-color: var(--back-white-grey);
+}
+
+.proposal__input__button {
+  font-size: 2rem;
+  border-radius: 3px;
+  height: 4rem;
+  color: var(--font-white);
+  background-color: var(--font-red);
+}
+
+.proposal__input.description {
+  height: 15rem;
 }
 
 /* -------------------- App Screenshot -----------------*/
