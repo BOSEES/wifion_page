@@ -489,6 +489,7 @@ p {
 }
 
 .proposal__input__button {
+  border: none;
   font-size: 2rem;
   border-radius: 3px;
   height: 4rem;

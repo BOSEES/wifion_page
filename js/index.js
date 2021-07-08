@@ -7,7 +7,6 @@ const serviceFeatures = document.querySelector("#service__features");
 const serviceFeaturesFlag = document.querySelectorAll(".service__features__flag");
 let index = 0;
 
-console.log(serviceFeaturesFlag);
 const navbarMoveScroll = (event) => {
   const location = document.querySelector(`#${event.target.dataset.link}`).offsetTop;
   window.scrollTo({top: location - 110,behavior: "smooth" } );
