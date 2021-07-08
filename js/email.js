@@ -1,3 +1,15 @@
+const buttonX = document.querySelector(".modal__x");
+
+const onModal = () => {
+  const modal = document.querySelector("#modal");
+  modal.classList.add("on");
+}
+
+const offModal = () => {
+  const modal = document.querySelector("#modal");
+  modal.classList.remove("on");
+}
+
 (function() {
   emailjs.init("user_OMvrMreKDEOENmm4PYs2T");
   })();
@@ -11,10 +23,12 @@
         emailjs.sendForm('service_ugd2mjp', 'template_fsgpbaa', this)
             .then(function() {
               console.log('SUCCESS!');
-              return alert("제안해주셔서 감사합니다!");
+              return onModal();
             }, function(error) {
               console.log('FAILED...', error);
               return alert("전송 실패");
             });
     });
 }
+
+buttonX.addEventListener("click", offModal);

@@ -5,6 +5,7 @@ const navbarLists = document.querySelector(".navbar__lists");
 const navbarList = document.querySelector(".navbar__list");
 const serviceFeatures = document.querySelector("#service__features");
 const serviceFeaturesFlag = document.querySelectorAll(".service__features__flag");
+
 let index = 0;
 
 const navbarMoveScroll = (event) => {
@@ -25,7 +26,6 @@ const changeFeatures = () => {
   index = (index + 1) % 3;
   serviceFeaturesFlag[index].classList.add("on");
 }
-
 
 navbarLists.addEventListener("click", navbarMoveScroll);
 window.addEventListener("scroll", navbarRepaint);
