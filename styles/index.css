@@ -152,7 +152,6 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 0rem 1rem 0rem;
   z-index: 2;
   transition: 400ms;
 }
@@ -171,23 +170,25 @@ p {
 
 .navbar__lists {
   display: flex;
+  font-weight: bold;
   margin-right: 4rem;
 }
 
 .navbar__list {
-  padding:1rem 2rem 1rem 2rem;
+  padding:2rem 1rem 2rem 1rem;
   margin-left: 2rem;
 }
 
 .navbar__list:hover {
-  border-top:solid 3px black;
-  color: var(--font-white);
-  /* transition: 100ms */
-  animation-duration: 100ms;
+  border-top:solid 5px var(--font-red);
+  padding-top:1.7rem;
+  color: var(--font-red);
+  transition: 100ms;
 }
 
-.navbar__list.red_font {
-  color: var(--font-red);
+.navbar__move li:hover {
+  border-top:solid 5px var(--font-white);
+  color: var(--font-white);
 }
 
 /* -------------------- Banner -----------------*/

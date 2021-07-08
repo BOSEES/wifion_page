@@ -6,7 +6,7 @@ const navbarList = document.querySelector(".navbar__list");
 
 const navbarMoveScroll = (event) => {
   const location = document.querySelector(`#${event.target.dataset.link}`).offsetTop;
-  window.scrollTo({top: location,behavior: "smooth" } );
+  window.scrollTo({top: location - 110,behavior: "smooth" } );
 };
 
 const navbarRepaint = (event) => {
@@ -16,5 +16,6 @@ const navbarRepaint = (event) => {
     navbar.classList.remove("navbar__move");
   }
 }
+
 navbarLists.addEventListener("click", navbarMoveScroll);
-window.addEventListener("scroll", navbarRepaint)
+window.addEventListener("scroll", navbarRepaint);
