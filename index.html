@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="/styles/index.css">
   <title>WIFION</title>
 </head>
-<body>
+<!-- oncontextmenu="return false" -->
+<body  ondragstart="return false" onselectstart="return false">
   <!-- Navbar -->
   <nav id="navbar">
     <img class="navbar__logo" src="/images/logo.png" alt="logo">
@@ -74,19 +75,53 @@
   </section>
   <!-- Service Features -->
   <section id="service__features">
-    <div class="service__features__texts">
-      <h3 class="service__features__subtitle">와이파이온 주요기능 첫번째</h3>
-      <h2 class="service__features__title">무료 와이파이 리스트</h2>
-      <hr class="service__features__line">
-      <h3 class="service__features__description">앱을 실행하면 무료로<br>연결가능한 와이파이 리스트를<br>한눈에 볼 수 있어요!</h3>
-      <div class="service__features__dots">
-        <div class="service__features__dot"></div>
-        <div class="service__features__dot"></div>
-        <div class="service__features__dot"></div>
+    <div class="service__features__flag on">
+      <div class="service__features__texts">
+        <h3 class="service__features__subtitle">와이파이온 주요기능 첫번째</h3>
+        <h2 class="service__features__title">무료 와이파이 리스트</h2>
+        <hr class="service__features__line">
+        <h3 class="service__features__description">앱을 실행하면 무료로<br>연결가능한 와이파이 리스트를<br>한눈에 볼 수 있어요!</h3>
+        <div class="service__features__dots">
+          <div class="service__features__dot1"></div>
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot"></div>
+        </div>
+      </div>
+      <div class="service__features__images">
+        <img class="service__features__image" src="./images/service_features-1.png" alt="아이폰">
       </div>
     </div>
-    <div class="service__features__images">
-      <img class="service__features__image" src="./images//service_features-1.png" alt="아이폰">
+    <div class="service__features__flag">
+      <div class="service__features__texts">
+        <h3 class="service__features__subtitle">와이파이온 주요기능 두번째</h3>
+        <h2 class="service__features__title">즐겨찾기 기능</h2>
+        <hr class="service__features__line">
+        <h3 class="service__features__description">즐겨찾기 기능을 통해 매장의<br>상세정보를 확인 할 수 있어요!</h3>
+        <div class="service__features__dots">
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot1"></div>
+          <div class="service__features__dot"></div>
+        </div>
+      </div>
+      <div class="service__features__images">
+        <img class="service__features__image" src="./images//service_features-2.png" alt="아이폰">
+      </div>
+    </div>
+    <div class="service__features__flag">
+      <div class="service__features__texts">
+        <h3 class="service__features__subtitle">와이파이온 주요기능 세번째</h3>
+        <h2 class="service__features__title">와이파이온을 통한 매장 홍보</h2>
+        <hr class="service__features__line">
+        <h3 class="service__features__description">와이파이온에 매장을 등록하면<br>앱을 통해 고객들에게<br>매장을 홍보할 수 있어요!</h3>
+        <div class="service__features__dots">
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot1"></div>
+        </div>
+      </div>
+      <div class="service__features__images">
+        <img class="service__features__image" src="./images/service_features-3.png" alt="아이폰">
+      </div>
     </div>
   </section>
   <!-- App Screenshot -->
@@ -198,5 +233,6 @@
     </div>
   </section>
   <script src="/js/index.js"></script>
+  
 </body>
 </html>
