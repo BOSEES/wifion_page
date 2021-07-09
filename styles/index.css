@@ -57,6 +57,7 @@
 }
 
 * {
+  /* max-width: 100%; */
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
@@ -174,6 +175,26 @@ p {
   margin-right: 4rem;
 }
 
+.navbar__hambuger1 {
+  display: none;
+  width: 2rem;
+  margin:1rem 1rem 1rem 1rem;
+}
+
+.navbar__hambuger2 {
+  display: none;
+  width: 2.3rem;
+  margin:1rem 1rem 1rem 1rem;
+}
+
+.navbar__hambuger1.on {
+  display: block;
+}
+
+.navbar__hambuger2.on {  
+  display: block;
+}
+
 .navbar__list {
   padding:2rem 1rem 2rem 1rem;
   margin-left: 2rem;
@@ -197,7 +218,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 61rem;
+  height: 100vh;
   background: url("../images/main_back-ground.png") center/cover no-repeat;
   border-bottom: var(--font-red) 3.6rem solid;
 }
@@ -210,11 +231,23 @@ p {
   margin-left: 6rem;
 }
 
+.banner__images {
+  flex-direction: column;
+}
+
 .banner__image-phone {
+  max-width: 100%;
   margin-top: 18rem;
   margin-right: 6.5rem;
   width: 22rem;
-  height: 44rem;
+  height: auto;
+}
+
+.banner__images-people {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
 }
 
 .banner__buttons {
@@ -227,7 +260,7 @@ p {
   height: 3rem;
   font-size: var(--font-small);
   border: 1px solid var(--font-grey);
-  border-radius: 30px;
+  border-radius: 50px;
   margin: 1rem;
   padding: 1rem;
   font-weight: bold;
@@ -267,6 +300,7 @@ p {
 
 .project__intro__image {
   width: 40rem;
+  max-width: 100%;
 }
 
 /* -------------------- Service Intro -----------------*/
@@ -334,6 +368,7 @@ p {
 }
 
 .service__features__image {
+  max-width:100%;
   margin: 5rem 10rem 0 0rem;
   width:36rem;
   height: 31rem;
@@ -418,7 +453,7 @@ p {
 }
 
 .company__intro__image {
-  width: 60rem;
+  max-width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -472,12 +507,14 @@ p {
 }
 
 .proposal__inputs {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   margin-left: 4rem;
 }
 
 .proposal__input {
+  max-width: 100%;
   width: 40rem;
   height: 3rem;
   padding:1rem;
@@ -539,7 +576,7 @@ p {
   width: 12.5rem;
   height: 3rem;
   font-size: var(--font-small);
-  border-radius: 30px;
+  border-radius: 50px;
   margin: 1rem;
   padding: 1rem;
   font-weight: bold;
@@ -632,5 +669,159 @@ p {
   }
   to {
     opacity: 0;
+  }
+}
+
+/*********************************
+ ** Responsive page media query **
+**********************************/
+
+@media screen and (max-width: 768px) {
+  /* global */
+  h1 {
+    font-size: 35px;
+    font-weight: var(--weight-bold);
+    color:var(--font-black);
+    margin: 16px 0px;
+  }
+  
+  h2 {
+    font-size: 25px;
+    font-weight: var(--weight-medium);
+    color: var(--font-black);
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-medium);
+    color: var(--font-light-grey);
+    margin: 8px 0;
+  }
+  
+  h5 {
+    margin: 4px 0;
+  }
+  
+  h6 {
+    margin: 4px 0;
+  }
+/* Navbar */
+  .navbar__logo {
+    margin: 1rem 1rem 1rem 1rem;
+    max-width: 100%;
+    width: 6rem;
+    height: auto;
+  }
+
+  .navbar__lists {
+    display: none;
+  }
+
+  
+/* Banner */
+  #banner {
+    align-items: unset;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 6rem;
+    border-bottom: var(--font-red) 2rem solid;
+  }
+
+  #banner h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .banner__image-people {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .banner__texts {
+    margin-left: 0;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .banner__image-phone {
+    display: none;
+  }
+
+  .banner__buttons {
+    display: block;
+  }
+
+  .banner__button {
+    width: 18rem;
+    height: 4rem;
+    font-size: 20px;
+  }
+
+  .banner__button__logo {
+    width: 2rem;
+  }
+
+  /* Screenshot 슬라이드이미지 대기 */ 
+
+  .screenshot__images {
+    display: none;
+  }
+
+  #company__intro {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Proposal 대기*/
+
+  .proposal__box {
+    display: none;
+  }
+
+  .proposal__boxes {
+    margin:1rem;
+  }
+
+  .proposal__inputs {
+    margin:0;
+  }
+
+  /* Service 대기 */
+
+  .service__intro__box {
+    display: none;
+  }
+
+  .service__features__image {
+    display: none;
+  }
+
+  .download__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download__button {
+    width: 18rem;
+    height: 4rem;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navbar__hambuger1.on {
+    display: none;
+  }
+
+  .navbar__hambuger2.on {
+    display: none;
+  }
+
+  .banner__images-people {
+    display: none;
   }
 }

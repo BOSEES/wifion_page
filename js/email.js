@@ -1,15 +1,20 @@
+//제안하기 - 모달창 닫기버튼
 const buttonX = document.querySelector(".modal__x");
 
+//제안하기 - 모달창 on,off
 const onModal = () => {
   const modal = document.querySelector("#modal");
   modal.classList.add("on");
 }
 
 const offModal = () => {
-  const modal = document.querySelector("#modal");
+const modal = document.querySelector("#modal");
   modal.classList.remove("on");
 }
 
+buttonX.addEventListener("click", offModal);
+
+//제안하기 - 이메일 전송을 위한 emailJS API 기본 셋팅
 (function() {
   emailjs.init("user_OMvrMreKDEOENmm4PYs2T");
   })();
@@ -30,5 +35,3 @@ const offModal = () => {
             });
     });
 }
-
-buttonX.addEventListener("click", offModal);
