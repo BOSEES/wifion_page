@@ -166,7 +166,7 @@ p {
 .navbar__logo {
   width: 9rem;
   height: 2.5rem;
-  margin-left: 6rem;
+  margin-left: 6vw;
 }
 
 .navbar__lists {
@@ -177,27 +177,18 @@ p {
 
 .navbar__hambuger1 {
   display: none;
-  width: 2rem;
-  margin:1rem 1rem 1rem 1rem;
+  width: 3rem;
+  margin:2rem 1rem 1rem 1rem;
 }
 
 .navbar__hambuger2 {
   display: none;
-  width: 2.3rem;
+  width: 3rem;
   margin:1rem 1rem 1rem 1rem;
-}
-
-.navbar__hambuger1.on {
-  display: block;
-}
-
-.navbar__hambuger2.on {  
-  display: block;
 }
 
 .navbar__list {
   padding:2rem 1rem 2rem 1rem;
-  margin-left: 2rem;
 }
 
 .navbar__list:hover {
@@ -236,11 +227,12 @@ p {
 }
 
 .banner__image-phone {
+  position: relative;
+  top:13vh;
+  right: 4vw;
   max-width: 100%;
-  margin-top: 18rem;
-  margin-right: 6.5rem;
-  width: 22rem;
-  height: auto;
+  height: 75vh;
+  width:auto;
 }
 
 .banner__images-people {
@@ -252,6 +244,8 @@ p {
 
 .banner__buttons {
   display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .banner__button {
@@ -431,14 +425,15 @@ p {
 }
 
 .screenshot__image {
+  max-width: 100%;
   width: 15rem;
-  height: 27rem;
+  height: auto;
 }
 
 /* -------------------- Company Intro -----------------*/
 
 #company__intro {
-  padding:5rem;
+  padding:5vw;
   text-align: center;
   background-color: var(--back-white-grey);
 }
@@ -486,20 +481,29 @@ p {
   background-color: var(--font-red);
 }
 
+.proposal__box {
+  max-width: 100%;
+  margin-right:4rem;
+}
+
 .proposal__box__map {
+  max-width: 100%;
   width: 40rem;
-  height: 35rem;
+  height: auto;
 }
 
 .proposal__box__address {
   display: flex;
   justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .proposal__box__item {
   margin:0.5rem;
   display: flex;
 }
+
+.proposal__box__item__text {}
 
 .proposal__box__item__image {
   width: 4rem;
@@ -508,14 +512,15 @@ p {
 
 .proposal__inputs {
   max-width: 100%;
+  width: 40rem;
   display: flex;
   flex-direction: column;
-  margin-left: 4rem;
+
 }
 
 .proposal__input {
   max-width: 100%;
-  width: 40rem;
+  width: 100%;
   height: 3rem;
   padding:1rem;
   margin-bottom: 1rem;
@@ -541,10 +546,10 @@ p {
 }
 
 .proposal__input.description {
-  height: 15rem;
+  height: 13rem;
 }
 
-/* -------------------- App Screenshot -----------------*/
+/* -------------------- Donwload -----------------*/
 
 #download {
   padding-top:7rem;
@@ -568,7 +573,9 @@ p {
 .download__buttons {
   display: flex;
   justify-content: center;
-  margin-bottom: 4.5rem;
+  /* margin-bottom: 4.5rem; */
+  /* justify-content: center; */
+  flex-wrap: nowrap;
 }
 
 .download__button {
@@ -675,6 +682,24 @@ p {
 /*********************************
  ** Responsive page media query **
 **********************************/
+@media screen and (max-width: 1024px) {
+  .navbar__lists {
+    display: none;
+  }
+
+  .navbar__hambuger1.on {
+    display: block;
+  }
+
+  .navbar__hambuger2.on {
+    display: block;
+  }
+
+  .proposal__box {
+    display: none;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   /* global */
@@ -707,46 +732,27 @@ p {
     margin: 4px 0;
   }
 /* Navbar */
-  .navbar__logo {
-    margin: 1rem 1rem 1rem 1rem;
-    max-width: 100%;
-    width: 6rem;
-    height: auto;
-  }
 
   .navbar__lists {
     display: none;
   }
+  .navbar__hambuger1.on {
+    display: block;
+  }
 
-  
+  .navbar__hambuger2.on {
+    display: block;
+  }
 /* Banner */
   #banner {
-    align-items: unset;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 6rem;
-    border-bottom: var(--font-red) 2rem solid;
-  }
-
-  #banner h1 {
-    margin: 0;
-    margin-bottom: 1rem;
-  }
-
-  .banner__image-people {
-    position: relative;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  }
-
-  .banner__texts {
-    margin-left: 0;
-    flex-direction: column;
     display: flex;
-    align-items: center;
+    text-align: center;
+    /* align-items: center; */
+    justify-content: center;
   }
-
+  .banner__texts {
+    margin:0;
+  }
   .banner__image-phone {
     display: none;
   }
@@ -755,39 +761,19 @@ p {
     display: block;
   }
 
-  .banner__button {
-    width: 18rem;
-    height: 4rem;
-    font-size: 20px;
+  .banner__images-people {
+    display: none;
   }
-
-  .banner__button__logo {
-    width: 2rem;
-  }
-
   /* Screenshot 슬라이드이미지 대기 */ 
 
   .screenshot__images {
     display: none;
   }
 
-  #company__intro {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
   /* Proposal 대기*/
 
   .proposal__box {
     display: none;
-  }
-
-  .proposal__boxes {
-    margin:1rem;
-  }
-
-  .proposal__inputs {
-    margin:0;
   }
 
   /* Service 대기 */
@@ -800,26 +786,12 @@ p {
     display: none;
   }
 
+  /* Download */
   .download__buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .download__button {
-    width: 18rem;
-    height: 4rem;
-    font-size: 20px;
+    display: block;
   }
 }
 @media screen and (min-width: 768px) {
-  .navbar__hambuger1.on {
-    display: none;
-  }
-
-  .navbar__hambuger2.on {
-    display: none;
-  }
 
   .banner__images-people {
     display: none;
