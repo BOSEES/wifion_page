@@ -244,8 +244,7 @@ p {
 
 .banner__buttons {
   display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .banner__button {
@@ -302,7 +301,7 @@ p {
 #service__intro {
   display: flex;
   justify-content: space-between;
-  padding: 4rem 9rem 4rem 9rem;
+  padding: 4vh 9vw 4vh 9vw;
   background-color: var(--back-grey);
 }
 
@@ -339,7 +338,7 @@ p {
 }
 
 .service__features__texts {
-  margin:10rem 0 10rem 10rem;
+  margin:10vh 0 0 10vw;
   margin-bottom: 0;
 }
 
@@ -361,11 +360,14 @@ p {
   height: 5rem;
 }
 
+.service__features__images {
+  margin:10vh 5vw 0 0;
+}
+
 .service__features__image {
   max-width:100%;
-  margin: 5rem 10rem 0 0rem;
-  width:36rem;
-  height: 31rem;
+  width:34rem;
+  height: auto;
 }
 
 .service__features__dots {
