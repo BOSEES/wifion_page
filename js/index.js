@@ -43,7 +43,7 @@ const iosPreparing = () => {
 }
 
 //이미지 슬라이드 반복
-setInterval(changeFeatures, 3500);
+// setInterval(changeFeatures, 5000);
 
 navbarLists.addEventListener("click", navbarMoveScroll);
 window.addEventListener("scroll", navbarRepaint);
