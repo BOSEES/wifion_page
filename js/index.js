@@ -37,6 +37,14 @@ const changeFeatures = () => {
   serviceFeaturesFlag[index].classList.add("on");
 }
 
+//와이파이온 ios 준비중 경고창
+const iosPreparing = () => {
+  return alert("준비중입니다.");
+}
+
+//이미지 슬라이드 반복
+setInterval(changeFeatures, 3500);
+
 navbarLists.addEventListener("click", navbarMoveScroll);
 window.addEventListener("scroll", navbarRepaint);
 serviceFeatures.addEventListener("click", changeFeatures);

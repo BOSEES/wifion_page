@@ -177,14 +177,14 @@ p {
 
 .navbar__hambuger1 {
   display: none;
-  width: 3rem;
-  margin:2rem 1rem 1rem 1rem;
+  width: 2.5rem;
+  margin:1rem 1rem 1rem 1rem;
 }
 
 .navbar__hambuger2 {
   display: none;
   width: 3rem;
-  margin:1rem 1rem 1rem 1rem;
+  margin:0.8rem 1rem 0.8rem 1rem;
 }
 
 .navbar__list {
@@ -233,13 +233,6 @@ p {
   max-width: 100%;
   height: 75vh;
   width:auto;
-}
-
-.banner__images-people {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 100%;
 }
 
 .banner__buttons {
@@ -327,9 +320,13 @@ p {
 }
 
 .service__features__flag.on{
+  position: relative;
   justify-content: space-between;
   display: flex;
-  animation: fade-in 1000ms;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  
 }
 
 .service__features__flag {
@@ -338,6 +335,7 @@ p {
 }
 
 .service__features__texts {
+  width: 50%;
   margin:10vh 0 0 10vw;
   margin-bottom: 0;
 }
@@ -421,6 +419,7 @@ p {
 }
 
 .screenshot__image__background {
+  display: inline;
   padding:1rem;
   margin:1rem;
   background-color: var(--back-grey);
@@ -430,6 +429,10 @@ p {
   max-width: 100%;
   width: 15rem;
   height: auto;
+}
+
+.screenshot__image-slide {
+  display: none;
 }
 
 /* -------------------- Company Intro -----------------*/
@@ -471,7 +474,7 @@ p {
 .proposal__boxes {
   display: flex;
   justify-content: center;
-  margin:3rem;
+  margin:1rem;
 }
 
 .proposal__line {
@@ -504,8 +507,6 @@ p {
   margin:0.5rem;
   display: flex;
 }
-
-.proposal__box__item__text {}
 
 .proposal__box__item__image {
   width: 4rem;
@@ -554,7 +555,7 @@ p {
 /* -------------------- Donwload -----------------*/
 
 #download {
-  padding-top:7rem;
+  padding-top:10vh;
   text-align: center;
   background-color: var(--font-red);
 }
@@ -575,9 +576,7 @@ p {
 .download__buttons {
   display: flex;
   justify-content: center;
-  /* margin-bottom: 4.5rem; */
-  /* justify-content: center; */
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .download__button {
@@ -606,6 +605,7 @@ p {
 
 .download__footer {
   display: flex;
+  margin-top: 7vh;
   height: 3.5rem;
   justify-content: center;
   align-items: center;
@@ -674,10 +674,25 @@ p {
 
 @keyframes fade-out {
   from { 
-    opacity: 1;
+    opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  0% {
+    left:100px;
+  }
+  100% {
+    left:0px;
+  }
+  from { 
     opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -705,33 +720,37 @@ p {
 
 @media screen and (max-width: 768px) {
   /* global */
+  br {
+    display: none;
+  }
+
   h1 {
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: var(--weight-bold);
     color:var(--font-black);
-    margin: 16px 0px;
+    margin: 16px 16px;
   }
   
   h2 {
-    font-size: 25px;
+    font-size: 1.7rem;
     font-weight: var(--weight-medium);
     color: var(--font-black);
-    margin: 0;
+    margin: 0 16px;
   }
   
   h3 {
     font-size: var(--font-regular);
     font-weight: var(--weight-medium);
     color: var(--font-light-grey);
-    margin: 8px 0;
+    margin: 8px 8px;
   }
   
   h5 {
-    margin: 4px 0;
+    margin: 4px 16px;
   }
   
   h6 {
-    margin: 4px 0;
+    margin: 4px 16px;
   }
 /* Navbar */
 
@@ -760,16 +779,38 @@ p {
   }
 
   .banner__buttons {
-    display: block;
+    display: flex;
+    justify-content: center;
+    
   }
-
-  .banner__images-people {
-    display: none;
-  }
-  /* Screenshot 슬라이드이미지 대기 */ 
 
   .screenshot__images {
+  }
+
+  .screenshot__image__background {
     display: none;
+    max-width: 100%;
+  }
+
+  .screenshot__image__image {
+    display: flex; 
+    width: 100rem;
+    /* width: 100%; */
+    /* height: 100%; */
+  }
+
+  .test {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .screenshot__image-slide {
+    display: block;
+    float:left;
+    /* position: relative; */
+    width: 100%;
+    border: 3rem solid var(--back-white-grey);
+    height: auto;
   }
 
   /* Proposal 대기*/
@@ -790,12 +831,9 @@ p {
 
   /* Download */
   .download__buttons {
-    display: block;
+    display: flex;
   }
 }
 @media screen and (min-width: 768px) {
 
-  .banner__images-people {
-    display: none;
-  }
 }
