@@ -18,8 +18,10 @@
   <!-- Navbar -->
   <nav id="navbar">
     <img class="navbar__logo" src="/images/logo.png" alt="logo">
-    <img class="navbar__hambuger1 on" src="images/mobile/hambuger1.png" alt="hambuger">
-    <img class="navbar__hambuger2" src="images/mobile/hambuger2.png" alt="hambuger">
+    <div class="navbar__hambugers">
+      <img class="navbar__hambuger1 on" src="images/mobile/hambuger1.png" alt="hambuger">
+      <img class="navbar__hambuger2" src="images/mobile/hambuger2.png" alt="hambuger">
+    </div>
     <ul class="navbar__lists">
       <li class="navbar__list" data-link="banner">홈</li>
       <li class="navbar__list" data-link="project__intro">프로젝트 소개</li>
@@ -31,6 +33,17 @@
       <li class="navbar__list" data-link="proposal">제안 하기</li>
     </ul>
   </nav>
+  <ul class="navbar__sidebar__menus">
+    <img class="navbar__sidebar__menu_exit" src="./images/mobile/x3.png
+    " alt="닫기 버튼">
+    <li class="navbar__sidebar__menu" data-link="banner">홈</li>
+    <li class="navbar__sidebar__menu" data-link="project__intro">프로젝트 소개</li>
+    <li class="navbar__sidebar__menu" data-link="service__features">서비스 소개</li>
+    <li class="navbar__sidebar__menu" data-link="screenshot">앱스크린샷</li>
+    <li class="navbar__sidebar__menu" data-link="download">앱 설치하기</li>
+    <li class="navbar__sidebar__menu" data-link="company__intro">회사 소개</li>
+    <li class="navbar__sidebar__menu" data-link="proposal">제안 하기</li>
+  </ul>
   <!-- Banner -->
   <section id="banner">
     <div class="banner__texts">
@@ -91,13 +104,13 @@
           <hr class="service__features__line">
         </div>
         <h3 class="service__features__description">앱을 실행하면 무료로<br>연결가능한 와이파이 리스트를<br>한눈에 볼 수 있어요!</h3>
+        <div class="service__features__images">
+          <img class="service__features__image-mobile" src="./images/test3.png" alt="아이폰">
+        </div>
         <div class="service__features__dots">
           <div class="service__features__dot1"></div>
           <div class="service__features__dot"></div>
           <div class="service__features__dot"></div>
-        </div>
-        <div class="service__features__images">
-          <img class="service__features__image-mobile" src="./images/test3.png" alt="아이폰">
         </div>
       </div>
       <div class="service__features__images">
@@ -112,14 +125,14 @@
           <hr class="service__features__line">
         </div>
         
-        <h3 class="service__features__description">즐겨찾기 기능을 통해 매장의<br>상세정보를 확인 할 수 있어요!</h3>
+        <h3 class="service__features__description">즐겨찾기 기능을 통해 매장의 <br>상세정보를 확인 할 수 있어요!</h3>
+        <div class="service__features__images">
+          <img class="service__features__image-mobile" src="./images/test3.png" alt="아이폰">
+        </div>
         <div class="service__features__dots">
           <div class="service__features__dot"></div>
           <div class="service__features__dot1"></div>
           <div class="service__features__dot"></div>
-        </div>
-        <div class="service__features__images">
-          <img class="service__features__image-mobile" src="./images/test3.png" alt="아이폰">
         </div>
       </div>
       <div class="service__features__images">
@@ -134,13 +147,13 @@
           <hr class="service__features__line">
         </div>
         <h3 class="service__features__description">와이파이온에 매장을 등록하면<br>앱을 통해 고객들에게<br>매장을 홍보할 수 있어요!</h3>
+        <div class="service__features__images">
+          <img class="service__features__image-mobile" src="./images/test3.png" alt="아이폰">
+        </div>
         <div class="service__features__dots">
           <div class="service__features__dot"></div>
           <div class="service__features__dot"></div>
           <div class="service__features__dot1"></div>
-        </div>
-        <div class="service__features__images">
-          <img class="service__features__image-mobile" src="./images/test3.png" alt="아이폰">
         </div>
       </div>
       <div class="service__features__images">
@@ -154,24 +167,41 @@
     <hr class="screenshot__line">
     <h3 class="screenshot__description">와이파이온 앱 서비스를 미리 이미지로 경험해보세요.</h3>
     <div class="screenshot__images">
-      <div class="test">
-        <img class="screenshot__image-slide" src="./images/screenshot-1.jpg" alt="스크린 샷">
-        <img class="screenshot__image-slide" src="./images/screenshot-2.jpg" alt="스크린 샷">
-        <img class="screenshot__image-slide" src="./images/screenshot-3.jpg" alt="스크린 샷">
-        <img class="screenshot__image-slide" src="./images/screenshot-4.jpg" alt="스크린 샷">
-      </div>
-
-      <div class="screenshot__image__background">
+      <div class="screenshot__image__background on">
         <img class="screenshot__image" src="./images/screenshot-1.jpg" alt="스크린 샷">
+        <div class="service__features__dots">
+          <div class="service__features__dot1"></div>
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot"></div>
+        </div>
       </div>
       <div class="screenshot__image__background">
         <img class="screenshot__image" src="./images/screenshot-2.jpg" alt="스크린 샷">
+        <div class="service__features__dots">
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot1"></div>
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot"></div>
+        </div>
       </div>
       <div class="screenshot__image__background">
         <img class="screenshot__image" src="./images/screenshot-3.jpg" alt="스크린 샷">
+        <div class="service__features__dots">
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot1"></div>
+          <div class="service__features__dot"></div>
+        </div>
       </div>
       <div class="screenshot__image__background">
         <img class="screenshot__image" src="./images/screenshot-4.jpg" alt="스크린 샷">
+        <div class="service__features__dots">
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot"></div>
+          <div class="service__features__dot1"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -246,7 +276,7 @@
   </section>
   <!-- App download -->
   <section id="download">
-    <h2 class="download__title">편리하고 쉬운 앱 와이파이온,<br><strong>지금 다운로드 해보세요!</strong></h2>
+    <h2 class="download__title">편리하고 쉬운 앱 와이파이온,<br class="t"><strong>지금 다운로드 해보세요!</strong></h2>
     <hr class="download__line">
     <ul class="download__buttons">        
       <a href="https://play.google.com/store/apps/details?id=com.nexcontelecom.wifion" target="blank">

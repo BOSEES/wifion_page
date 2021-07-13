@@ -203,6 +203,36 @@ p {
   color: var(--font-white);
 }
 
+.navbar__sidebar__menus { 
+  display: none;
+}
+
+.navbar__sidebar__menus.on {
+  position: fixed;
+  text-align: right;
+  font-size: 1.5rem;
+  width: 60vw;
+  height: 100vh;
+  left:40vw;
+  color: var(--font-white);
+  background-color: var(--font-red);
+  z-index: 2;
+  animation-name: sidebarMove;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in; 
+
+}
+
+.navbar__sidebar__menu_exit {
+  width: 4.5rem;
+  padding:1rem;
+}
+
+.navbar__sidebar__menu{
+  margin:0.5rem;
+  padding:0.5rem;
+}
+
 /* -------------------- Banner -----------------*/
 
 #banner {
@@ -357,10 +387,6 @@ p {
   height: 5rem;
 }
 
-.service__features__images {
-  margin:10vh 5vw 0 0;
-}
-
 .service__features__image {
   max-width:100%;
   width:30rem;
@@ -434,6 +460,10 @@ p {
 }
 
 .screenshot__image-slide {
+  display: none;
+}
+
+.screenshot__images .service__features__dots {
   display: none;
 }
 
@@ -698,6 +728,21 @@ p {
   }
 }
 
+@keyframes sidebarMove {
+  0% {
+    left :90vw;
+  }
+  100% {
+    left: 40vw;
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*********************************
  ** Responsive page media query **
 **********************************/
@@ -737,7 +782,7 @@ p {
     font-size: 1.7rem;
     font-weight: var(--weight-medium);
     color: var(--font-black);
-    margin: 0 16px;
+    margin: 0 10px;
   }
   
   h3 {
@@ -766,6 +811,11 @@ p {
   .navbar__hambuger2.on {
     display: block;
   }
+
+  .navbar__sidebar__menus.on {
+    display: block;
+  }
+  
 /* Banner */
   #banner {
     display: flex;
@@ -787,30 +837,32 @@ p {
   }
 
   .screenshot__images {
+    display: block; 
   }
-
   .screenshot__image__background {
     display: none;
-    max-width: 100%;
+  }
+  
+  .screenshot__image__background.on{
+    display: block;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    margin-left:10vw;
+    max-width: 80%;
+    height: 70vh;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
   }
 
   .screenshot__image {
-    display: flex; 
-    width: 100rem;
+    width: auto;
+    height: 90%;
   }
 
-  .test {
+  .screenshot__images .service__features__dots {
     display: flex;
-    overflow: hidden;
-  }
-
-  .screenshot__image-slide {
-    display: block;
-    float:left;
-    /* position: relative; */
-    width: 100%;
-    border: 1rem solid var(--back-white-grey);
-    height: auto;
   }
 
   /* Proposal 대기*/
@@ -819,9 +871,8 @@ p {
     display: none;
   }
 
-  /* Service 대기 */
-
-  .service__intro__box {
+  /* Service*/
+  #service__intro {
     display: none;
   }
   
@@ -829,7 +880,7 @@ p {
     text-align: center;
     align-items: center;
     width: 100%;
-    margin:10vh 0 0 10vw;
+    margin:10vh 0 0 5vw;
     margin-bottom: 0;
   }
   
@@ -846,6 +897,10 @@ p {
     margin-right: 0;
   }
 
+  .service__features__images {
+    margin:0vh 8vw 0 5vw;
+  }
+
   .service__features__image {
     display: none;
   }
@@ -859,6 +914,10 @@ p {
   /* Download */
   .download__buttons {
     display: flex;
+  }
+
+  .t {
+    display: block;
   }
 }
 @media screen and (min-width: 768px) {
