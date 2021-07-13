@@ -241,7 +241,7 @@ p {
   justify-content: space-between;
   height: 100vh;
   background: url("../images/main_back-ground.png") center/cover no-repeat;
-  border-bottom: var(--font-red) 3.6rem solid;
+  border-bottom: var(--font-red) 4vh solid;
 }
 
 #banner h1 {
@@ -294,6 +294,21 @@ p {
   margin-right:1rem;
 }
 
+.banner__arrow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  animation-name: arrowMove;
+  animation-duration: 600ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.banner__arrow img {
+  width: 3rem;
+  height: auto;
+}
 /* -------------------- Project Intro -----------------*/
 
 #project__intro {
@@ -737,6 +752,21 @@ p {
   }
   from {
     opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    bottom: 15vh;
+  }
+  100% {
+    bottom: 10vh;
+  }
+  from {
+    opacity: 0.2;
   }
   to {
     opacity: 1;
