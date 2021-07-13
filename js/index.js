@@ -55,11 +55,6 @@ const changeScreenshot = () => {
   screenshotImageFlag[screenshotImageIndex].classList.add("on");
 }
 
-//와이파이온 ios 준비중 경고창
-const iosPreparing = () => {
-  return alert("준비중입니다.");
-}
-
 //모바일용 네비게이션바 햄버거버튼 on
 const onSidebarMenu = () => {
   navbarSidebarMenu.classList.add("on")
