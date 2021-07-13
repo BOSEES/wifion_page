@@ -267,7 +267,11 @@
       </div>
       <form class="proposal__inputs">
         <input type="hidden" name="contact_number">
-        <input class="proposal__input" type="text" placeholder="제안 분류를 선택해주세요" name="category">
+        <select class="proposal__input" name="category">
+          <option value="" selected="selected">제안 분류를 선택해주세요</option>
+          <option value="제휴 협업">제휴 협업</option>
+          <option value="서비스 개선">서비스 개선</option>
+        </select>
         <input class="proposal__input" type="text" placeholder="이름을 입력해주세요" name="from_name">
         <input class="proposal__input" type="number" placeholder="연락처를 입력해주세요" name="from_phone_number">
         <input class="proposal__input" type="email" placeholder="이메일을 입력해주세요." name="from_email">
