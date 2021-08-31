@@ -240,7 +240,7 @@ p {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
-  background: url("../images/main_back-ground.png") center/cover no-repeat;
+  background: url("../images/main_back-ground.jpg") center/cover no-repeat;
   border-bottom: var(--font-red) 4vh solid;
 }
 
