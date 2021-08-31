@@ -19,6 +19,7 @@ let screenshotImageIndex = 0;
 //네비게이션 바 (웹) - 요소 클릭시 페이지 이동.
 const navbarMoveScroll = (event) => {
   const location = document.querySelector(`#${event.target.dataset.link}`).offsetTop;
+  
   window.scrollTo({top: location - 110,behavior: "smooth" } );
 };
 //네비게이션바 (모바일) - 요소 클릭시 페이지 이동.
