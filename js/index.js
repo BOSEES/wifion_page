@@ -1,5 +1,4 @@
 "use strict";
-
 const navbar = document.querySelector("#navbar");
 const navbarLists = document.querySelector(".navbar__lists");
 const navbarList = document.querySelector(".navbar__list");
@@ -18,15 +17,26 @@ let screenshotImageIndex = 0;
 
 //네비게이션 바 (웹) - 요소 클릭시 페이지 이동.
 const navbarMoveScroll = (event) => {
-  const location = document.querySelector(`#${event.target.dataset.link}`).offsetTop;
-  
-  window.scrollTo({top: location - 110,behavior: "smooth" } );
+  if(isSafari) {
+    const element = document.querySelector(`#${event.target.dataset.link}`);
+    safariScroll(element);
+    ;
+  } else {
+    const location = document.querySelector(`#${event.target.dataset.link}`).offsetTop;
+    window.scrollTo({top: location - 110,behavior: "smooth" } );
+  }
 };
 //네비게이션바 (모바일) - 요소 클릭시 페이지 이동.
 const onMovePage = (event) => {
-  const location = document.querySelector(`#${event.target.dataset.link}`).offsetTop;
-  window.scrollTo({top: location - 110,behavior: "smooth" } );
-  onExit();
+  if (isSafari) {
+    const element = document.querySelector(`#${event.target.dataset.link}`);
+    safariScroll(element);
+    onExit();
+  } else {
+    const location = document.querySelector(`#${event.target.dataset.link}`).offsetTop;
+    window.scrollTo({top: location - 110,behavior: "smooth" } );
+    onExit();
+  }
 }
 
 //네비게이션 바 - 스크롤의 따른 네비게이션바 배경,요소 색상 변경.
