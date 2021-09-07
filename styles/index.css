@@ -482,6 +482,10 @@ p {
   display: none;
 }
 
+.terms {
+  color: white;
+}
+
 /* -------------------- Company Intro -----------------*/
 
 #company__intro {
