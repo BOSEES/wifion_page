@@ -22,6 +22,11 @@ buttonX.addEventListener("click", offModal);
   window.onload = function() {
     document.querySelector('.proposal__inputs').addEventListener('submit', function(event) {
         event.preventDefault();
+        for (let i = 1; i < event.target.length; i++ ){
+          if (event.target[i].value == "") {
+            return alert("필수 입력란이 비어있습니다. 확인해주세요");
+          }
+        }
         // generate a five digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
         // these IDs from the previous steps
