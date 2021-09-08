@@ -27,6 +27,9 @@ buttonX.addEventListener("click", offModal);
             return alert("필수 입력란이 비어있습니다. 확인해주세요");
           }
         }
+        for (let i = 1; i < event.target.length; i++) {
+          event.target[i].value = "";
+        }
         // generate a five digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
         // these IDs from the previous steps
