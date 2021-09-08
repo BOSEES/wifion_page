@@ -38,6 +38,7 @@ buttonX.addEventListener("click", offModal);
               console.log('FAILED...', error);
               return alert("전송 실패");
             });
+            //어뷰징 방지 리셋
             for (let i = 1; i < event.target.length; i++) {
               event.target[i].value = "";
             }
